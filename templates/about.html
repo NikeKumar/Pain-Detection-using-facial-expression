@@ -1,0 +1,133 @@
+{% extends 'layout.html' %} {% block body %}
+<style type="text/css">
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;  
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+.about-section {
+  padding: 10px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="about-section">
+  <h1>About Us Page</h1>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  
+
+  <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/1bharath2.jpg') }}" alt="bharath" style="width:100%">
+      <div class="container">
+        <h2>P. Bharathkumar</h2>
+        <p class="title">BE CSE</p>
+        <p class="title">510119104003</p>
+        <p>Adhiparasakthi College of Engineering</p>
+        <p>kumar2345bharath@gmail.com</p>
+        <p>
+	<a href="http://www.instagram.com/its_me_bijili">
+	<img src="{{ url_for('static', filename='images/instagram.png') }}" alt="insta" style="width:10%"></a>
+	<a href="http://www.linkedin.com/in/p-bharathkumar-30394a233">
+	<img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="insta" style="width:10%"></a>
+	<a href="http://www.github.com/bharath20011812">
+	<img src="{{ url_for('static', filename='images/github.png') }}" alt="insta" style="width:10%"></a>
+	</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/1nithish1.jpg') }}" alt="nithish" style="width:100%">
+      <div class="container">
+        <h2>G. Nithish Kumar</h2>
+        <p class="title">BE CSE</p>
+        <p class="title">510119104015</p>
+        <p>Adhiparasakthi College of Engineering</p>
+        <p>kumarnithish207@gmail.com</p>
+        <p>
+	<a href="http://www.instagram.com/nikekumar_">
+	<img src="{{ url_for('static', filename='images/instagram.png') }}" alt="insta" style="width:10%"></a>
+	<a href="http://www.linkedin.com/in/nithish-kumar-2314ba194">
+	<img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="insta" style="width:10%"></a>
+	<a href="http://www.github.com/Nikekumar">
+	<img src="{{ url_for('static', filename='images/github.png') }}" alt="insta" style="width:10%"></a>
+	</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</body>
+
+{% endblock %}
+
+</html>
